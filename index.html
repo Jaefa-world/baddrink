@@ -148,14 +148,16 @@
     c.fillText('정이한',px,py+cs(16));
     // 목
     c.fillStyle='#f6ad55'; c.fillRect(px-cs(5),py-cs(16),cs(10),cs(10));
-    // 청록색 목깁스
-    c.fillStyle='#00b8b8';
-    c.beginPath(); c.roundRect(px-cs(8),py-cs(17),cs(16),cs(12),cs(3)); c.fill();
+    // 청록색 목깁스 - 크고 두툼하게
+    c.fillStyle='#00c8c8';
+    c.beginPath(); c.roundRect(px-cs(14),py-cs(22),cs(28),cs(20),cs(5)); c.fill();
     c.fillStyle='#009999';
-    c.fillRect(px-cs(8),py-cs(12),cs(16),cs(2));
-    c.fillRect(px-cs(8),py-cs(8),cs(16),cs(2));
-    c.fillStyle='rgba(255,255,255,0.3)';
-    c.fillRect(px-cs(6),py-cs(16),cs(3),cs(11));
+    c.fillRect(px-cs(14),py-cs(16),cs(28),cs(2.5));
+    c.fillRect(px-cs(14),py-cs(10),cs(28),cs(2.5));
+    c.fillStyle='rgba(255,255,255,0.25)';
+    c.fillRect(px-cs(11),py-cs(21),cs(5),cs(18));
+    c.fillStyle='#00b0b0';
+    c.beginPath(); c.roundRect(px-cs(12),py-cs(23),cs(24),cs(6),cs(4)); c.fill();
     // 머리
     c.fillStyle='#f6ad55'; c.beginPath(); c.ellipse(px,py-cs(27),cs(17),cs(20),0,0,Math.PI*2); c.fill();
     c.fillStyle='#2d3748'; c.beginPath(); c.ellipse(px,py-cs(40),cs(17),cs(10),0,Math.PI,0); c.fill();
@@ -306,13 +308,19 @@
     ctx.fillStyle='#f6ad55'; ctx.fillRect(cx-s(5),cy-s(16),s(10),s(10));
     // 목깁스 (게임오버/결과에서만)
     if(neckBrace){
-      ctx.fillStyle='#00b8b8';
-      ctx.beginPath(); ctx.roundRect(cx-s(8),cy-s(17),s(16),s(12),s(3)); ctx.fill();
+      // 목깁스 본체 - 턱 아래까지 크게
+      ctx.fillStyle='#00c8c8';
+      ctx.beginPath(); ctx.roundRect(cx-s(14),cy-s(22),s(28),s(20),s(5)); ctx.fill();
+      // 가로 줄 디테일
       ctx.fillStyle='#009999';
-      ctx.fillRect(cx-s(8),cy-s(12),s(16),s(2));
-      ctx.fillRect(cx-s(8),cy-s(8),s(16),s(2));
-      ctx.fillStyle='rgba(255,255,255,0.3)';
-      ctx.fillRect(cx-s(6),cy-s(16),s(3),s(11));
+      ctx.fillRect(cx-s(14),cy-s(16),s(28),s(2.5));
+      ctx.fillRect(cx-s(14),cy-s(10),s(28),s(2.5));
+      // 하이라이트
+      ctx.fillStyle='rgba(255,255,255,0.25)';
+      ctx.fillRect(cx-s(11),cy-s(21),s(5),s(18));
+      // 턱 받침 위쪽 곡선
+      ctx.fillStyle='#00b0b0';
+      ctx.beginPath(); ctx.roundRect(cx-s(12),cy-s(23),s(24),s(6),s(4)); ctx.fill();
     }
     // 머리
     ctx.fillStyle='#f6ad55'; ctx.beginPath(); ctx.ellipse(cx,cy-s(28),s(19),s(22),0,0,Math.PI*2); ctx.fill();
